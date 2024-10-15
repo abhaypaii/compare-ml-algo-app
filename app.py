@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from lazypredict.Supervised import LazyRegressor, LazyClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_iris, load_wine
+from sklearn.datasets import load_diaetes, load_iris, load_wine
 import matplotlib.pyplot as plt
 import time
 import psutil
@@ -22,6 +22,10 @@ def get_memory_usage():
     return psutil.Process().memory_info().rss / (1024 * 1024)  # in MB
 
 def load_demo_dataset(dataset_name):
+    if dataset_name == "Diabetes":
+        data = load_diabetes()
+        X, y = data.data, data.target
+        task = "regression"
     if dataset_name == "Iris":
         data = load_iris()
         X, y = data.data, data.target
