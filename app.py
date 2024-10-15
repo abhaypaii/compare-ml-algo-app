@@ -72,7 +72,7 @@ def display_results(results):
     with col2:
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
         
-        results[['Time (s)']].plot(kind='bar', ax=ax1)
+        results[['time_taken']].plot(kind='bar', ax=ax1)
         ax1.set_title("Time Complexity")
         ax1.set_ylabel("Time (s)")
         ax1.tick_params(axis='x', rotation=90)
