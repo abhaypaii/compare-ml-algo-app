@@ -111,7 +111,7 @@ with tab1:
             st.error("This dataset is not suitable for "+task)
 
 with tab2:
-    dataset_name = st.selectbox("Choose a demo dataset", ["Iris", "Wine"])
+    dataset_name = st.selectbox("Choose a demo dataset", ["Diabetes", "Iris", "Wine"])
     if st.button("Run Analysis", key="demo"):
         progress_bar = st.progress(0)
         X, y, task = load_demo_dataset(dataset_name)
