@@ -81,7 +81,7 @@ def display_results(results):
         plt.tight_layout()
         st.pyplot(fig)
 
-st.title("ML Model Complexity Comparison")
+st.title("ML Model Comparison")
 
 tab1, tab2 = st.tabs(["Upload Dataset", "Demo Datasets"])
 
